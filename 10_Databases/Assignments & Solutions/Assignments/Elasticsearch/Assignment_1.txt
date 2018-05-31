@@ -1,0 +1,1 @@
+Write code to store students data(ID, Name, Marks, Class, Subject) by sending request. Retrieve failed students(Marks < 35) data for subject Maths from the database.

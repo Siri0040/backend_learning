@@ -1,0 +1,6 @@
+A. Insert 6 employees(with properties name, mail id, gender) and 2 companies. And make relations between 5 employees and first company as 1 director, 1 project_lead, and 3 software engineers. And another person as director of second company.
+Note: Keep both male and female employees.
+
+B. For the previous data you have created, show female software engineers from Company1
+
+C. Update employee's technical skills in properties. 

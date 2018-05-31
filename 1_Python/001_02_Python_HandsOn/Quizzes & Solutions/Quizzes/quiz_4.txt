@@ -1,0 +1,16 @@
+1. Is this statement True or False? Dictionaries retain order and are a sequence.
+	a. True
+	b. False
+	
+
+	
+2. Given d={'k1':[1,2,3]} What is the output of d['k1'][1]
+	a. None, an error occurs. 
+	b. 1
+	c. 2
+	d. 3
+	
+
+3. Is this statement True or False? Dictionaries are immutable. Choose the answer below.
+	a. True
+	b. False

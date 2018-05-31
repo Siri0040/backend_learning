@@ -1,0 +1,16 @@
+1. {1,2,3,4} is an example of a Set.
+	a. True
+	b. False
+	
+2. How to you add an element to a set?
+	a. .add()
+	b. .append()
+	c. .extend()
+	d. None of the Above
+	
+3. What is the result of: set([1,1,2,3])
+	a. An error
+	b. [1,2,3]
+	c. {1,1,2,3}
+	d. {1,2,3}
+	

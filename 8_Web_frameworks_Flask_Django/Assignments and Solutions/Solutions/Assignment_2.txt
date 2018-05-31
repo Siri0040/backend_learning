@@ -1,0 +1,54 @@
+from flask import Flask, request
+app = Flask(__name__)
+import hashlib
+
+@app.route('/validate_hash', methods=['POST', 'GET'])
+def validate_hash():
+
+    if request.method == 'POST':
+        result = False
+        text_value = request.form['text_value']
+        hash_value = request.form['hash_value']
+        hash_type = request.form['hash_type']
+        if hash_type == 'md5':
+            res = hashlib.md5(text_value).hexdigest()
+            if res == hash_value:
+                result = True
+
+        elif hash_type == 'sha1':
+            res = hashlib.sha1(text_value).hexdigest()
+            if res == hash_value:
+                result = True
+
+        elif hash_type == 'sha224':
+            res = hashlib.sha224(text_value).hexdigest()
+            if res == hash_value:
+                result = True
+
+        elif hash_type == 'sha256':
+            res = hashlib.sha256(text_value).hexdigest()
+            if res == hash_value:
+                result = True
+
+        if result:
+            return "Valid hash"
+        else:
+            return "Invalid hash"
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+Test: 
+
+Valid Hashes for input_value:’this text need to be encoded’
+r = requests.post('http://127.0.0.1:5000/validate_hash', data={'text_value':'this text need to be encoded','hash_value':'90b8221166ed98ddb867d0f0efd07bc3', 'hash_type':'md5'}
+
+r = requests.post('http://127.0.0.1:5000/validate_hash', data={'text_value':'this text need to be encoded','hash_value':'8d9e831bc8cc6db47e1bf77c1e64e1763373721c2e21ad8458a30c76', 'hash_type':'sha224'})
+
+r = requests.post('http://127.0.0.1:5000/validate_hash', data={'text_value':'this text need to be encoded','hash_value':'ba833ff158f28e5256296249e92206e7ff4728c8', 'hash_type':'sha1'})
+
+r = requests.post('http://127.0.0.1:5000/validate_hash', data={'text_value':'this text need to be encoded','hash_value':'e8a59401cab354a1cb8ada328a158b31012211b404a8ea68c94c3aa10949da18', 'hash_type':'sha256'})
+
+And type r.text to check the output.
+

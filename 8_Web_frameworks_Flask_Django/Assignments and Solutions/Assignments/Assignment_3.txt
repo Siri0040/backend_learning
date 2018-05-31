@@ -1,0 +1,11 @@
+Create a project to 
+
+1. insert comments to the existed post
+2. get comments for a given post
+3. update comment
+
+
+Hint: For posts and comments, 2 models(FbPosts, FbComments) need to be created and post from FbPosts will be the foreign key for post in FbComments.
+For inserting comment, input: post and comment, output: Record Inserted
+For getting comments, input: post, output: dictionary with post as key and comment as value.
+For updating comments, input: post, updated post, output: dictionary with post as key and updated comment as value.

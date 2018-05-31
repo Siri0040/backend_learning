@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>Users and Posts (<a href = "{{ url_for('insert_post') }}">Add Post
+         </a>)</h3>
+
+      <table>
+         <thead>
+            <tr>
+               <th>UserName</th>
+               <th>Post</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for each in user_posts %}
+               <tr>
+                  <td>{{ each.username }}</td>
+                  <td>{{ each.user_post }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+   </body>
+</html>

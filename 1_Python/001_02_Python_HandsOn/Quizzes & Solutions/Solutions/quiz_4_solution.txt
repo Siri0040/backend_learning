@@ -1,0 +1,15 @@
+1. 	Ans: b. 
+	Explanation: None. 
+	
+2. 	Ans: c. 
+	Explanation: None.
+	
+3.	Ans: b. 
+	Explanation: Remember you can edit the keys of a dictionary and put in new values.
+	
+What you know 
+Given d={'k1':[1,2,3]} What is the output of d['k1'][1]
+
+Is this statement True or False? Dictionaries retain order and are a sequence.
+
+Is this statement True or False? Dictionaries are immutable.Choose the answer b

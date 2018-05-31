@@ -1,0 +1,19 @@
+1. Tuples have a lot of methods associated with them.
+	a. True
+	b. False
+	
+	
+2. Tuples are Immutable.
+	a. True
+	b. False
+	
+ 
+	
+3. Which of the following is a tuple?
+	a. [1,2,3]
+	b. (1,2,[1,2])
+	c. (1,2,3]
+	d. None of the above. 
+	
+
+	

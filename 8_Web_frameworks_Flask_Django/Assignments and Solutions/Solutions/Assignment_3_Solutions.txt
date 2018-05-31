@@ -1,0 +1,92 @@
+from flask import Flask, request
+from flask_sqlalchemy import SQLAlchemy
+from flask import jsonify
+
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///FbPosts.sqlite3'
+
+db = SQLAlchemy(app)
+
+
+class FbComments(db.Model):
+    __tablename__ = 'fb_comments'
+    id = db.Column(db.Integer, primary_key=True)
+    user_post = db.Column(db.String(200), db.ForeignKey('fb_posts.user_post'))
+    user_comment = db.Column(db.String(200))
+
+
+class FbPosts(db.Model):
+    __tablename__ = 'fb_posts'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100))
+    user_post = db.Column(db.String(200))
+
+
+@app.route('/get_comments', methods=['POST'])
+def get_comments():
+    if request.method == 'POST':
+        all_comments_of_post = FbComments.query.filter_by(user_post=request.form['user_post'])
+        all_comments_dict = {}
+        for each in all_comments_of_post:
+            all_comments_dict.update({each.user_post: each.user_comment})
+        return jsonify(all_comments_dict)
+
+
+@app.route('/update_comment', methods=['POST'])
+def update_comment():
+    if request.method == 'POST':
+        comment_details = \
+            FbComments.query.filter_by(user_post=request.form['user_post']).first()
+        comment_details.user_comment =request.form['updated_comment']
+        db.session.commit()
+        updated_dict = {request.form['user_post']: comment_details.user_comment}
+        return jsonify(updated_dict)
+
+
+@app.route('/insert_comment', methods=['POST'])
+def insert_comment():
+    if request.method == 'POST':
+        comment_details = FbComments(user_post=request.form['user_post'], user_comment=request.form['user_comment'])
+        db.session.add(comment_details)
+        db.session.commit()
+        return "Record Inserted\n"
+
+
+
+
+
+Get Comments
+Test: (Python Request Library)
+r = requests.post('http://127.0.0.1:5000/get_comments', data={'user_post':'Hi. this is my first post.'})
+r.json()
+
+Test: (CURL)
+curl --request POST --data "user_post=Hi EveryOne" http://127.0.0.1:5000/get_comments
+
+
+
+Insert Comment
+Test: (Python Request Library)
+r = requests.post('http://127.0.0.1:5000/insert_comment', data={'user_post':'Hi. this is my first post.', 'user_comment':'Then, this is my first comment'})
+r.text
+
+Test: (CURL)
+curl --request POST --data "user_post=Hi EveryOne&user_comment=Hello" http://127.0.0.1:5000/insert_comment
+
+
+
+Update Comment
+Test: (Python Request Library)
+r = requests.post('http://127.0.0.1:5000/update_comment', data={'user_post':'Hi. this is my first post.', 'updated_comment':'Then, this is my first comment!!'})
+t.json()
+
+Test: (CURL)
+--request POST --data "user_post=Hi EveryOne&updated_comment=Hello,How are You" http://127.0.0.1:5000/update_comment
+
+
+
+
+
+
+

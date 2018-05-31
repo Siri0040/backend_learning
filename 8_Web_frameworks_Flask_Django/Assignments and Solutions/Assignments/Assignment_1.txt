@@ -1,0 +1,7 @@
+Write a code to get encoded or decoded data based on type we give.
+
+Input field 1: text
+Input field 2: encoding or decoding type(base64_encode, base64_decode, hexadecimal_encode, URL_decode) 
+Output: text in specified format
+
+The Output should be a dictionary with "res" as key and resulted text as value.

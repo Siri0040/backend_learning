@@ -1,0 +1,31 @@
+Unit Testing 
+	
+
+1. Write a python class called "Testing" with a function called test_string which checks and "Asserts" the equality of two strings a and b. Perform unit testing for the same. 
+	Hint: You can use the assertEqual() function. 
+	
+	
+2. Define two functions is_prime(number) which checks if a taken number is prime, and print_next_prime(number) which prints the closest prime number larger than the taken number. 
+	1. Perform a unit test assertion with a single test case: is 5 prime? 
+		Hint: you can use the assertTrue() function. 
+	
+	2. Perform a unit test assertion false with the test case : is 4 prime. Add a message in the msg argument to return a message "Four is not prime!"
+		Hint: you can use the assertFalse() function. 
+
+	
+3. 
+	1. Define a function which takes 2 numbers, multiplies them. Write an equality unit test assertion to check if the multiplication of those numbers equal 12. 
+	
+	2. Also add another function which takes two values - of any data type - and multiplies them with 3. Check if the result matches 'aaa'. Write a false unit test assertion to check if the comparison equals false. 
+	
+	Put both of the test cases in a single file and Perform a testdiscovery on the file. 
+	
+	
+	
+	
+	
+	
+	
+	
+
+

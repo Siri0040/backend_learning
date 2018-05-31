@@ -1,0 +1,24 @@
+Create a git repository by the name "Space Station"
+
+	1. Files to be in the repository" 
+		People.txt
+			3 People
+			Name 	Blood Grp	Skillset(Biologist & Doctor, Systems Engineer, Captain)
+		Places.txt
+			Med bay, Workout Bay, bunker, Cockpit
+		
+		Food.txt
+			Add any food here. 
+			
+	2. Commit and push the changes from the cloud. 
+	
+	3. Clone the repository and branch it with the name "Space Station - Command"
+		Add a file "Earth.txt"
+			Add a brief intro about anything related to earth. 
+			
+		Update the People.txt 
+			Add a new member - Spacewalk technician. 
+			
+		Commit and push the changes. 
+		Raise a merge request to the administrator. 
+

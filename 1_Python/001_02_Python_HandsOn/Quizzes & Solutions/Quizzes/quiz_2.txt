@@ -1,0 +1,28 @@
+1. Strings are immutable.
+	a. true
+	b. false
+	
+	Ans: a. 
+	Explanation: None. 
+	
+2. If s='hello' what is the output of s[1]
+	a. 'h'
+	b. 'e'
+	c. 'l'
+	
+	Ans: b
+	Explanation: None
+
+3. If s='Sammy' what is the output of s[2:]?
+	a. 'ammy' 
+	b. 'am'
+	c. 'mmy'
+	d. 'my'
+	
+	Ans: c.
+	Explanation: None. 
+	
+What you know 
+If s='hello' what is the output of s[1]
+If s='Sammy' what is the output of s[2:]?
+Strings are immutable.

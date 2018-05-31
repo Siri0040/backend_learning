@@ -1,0 +1,3 @@
+Write commands to Create a list with key "designations" and add 5 values to it and delete last value.
+Now, write command to display all the designations you have added.
+

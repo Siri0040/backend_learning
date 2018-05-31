@@ -1,0 +1,6 @@
+Write a code to check whether the given hash is valid or not based on hash type.
+Input field 1: text_data
+Input field 2: hash of the text
+Input field 3: hash type (md5, sha1, sha224, sha256)
+
+Output: Hash is valid or not

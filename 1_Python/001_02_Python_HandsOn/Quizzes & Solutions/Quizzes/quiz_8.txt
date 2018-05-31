@@ -1,0 +1,63 @@
+1. What will the following program print out:
+
+>>> x = 15
+>>> x = x + 5
+>>> print x
+
+			a. 20
+			b. 5
+			c. 15
+			d. "print x"
+			e. x + 5
+
+2. What is "code"?
+			a. A password we use to unlock Python features
+			b. A way to encrypt data during World War II
+			c. A sequence of instructions in a programming language
+			d. A set of rules that govern the style of programs
+			
+3. Python scripts (files) have names that end with:
+			a. doc
+			b. exe
+			c. py
+			d. png
+
+4. Which of these words is a reserved word in Python ?
+			a. for
+			b. names
+			c. pizza
+			d. payroll
+			
+5. What is the proper way to say “good-bye” to Python?
+			a. #EXIT
+			b. while
+			c. quit()
+			d. // stop
+			
+6. Which of the parts of a computer actually executes the program instructions?
+			a. Secondary Memory
+			b. Central Processing Unit
+			c. Input/Output Devices
+			d. Main Memory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			
+			
+			
+			
+			
+			
+			

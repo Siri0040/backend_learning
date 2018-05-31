@@ -1,0 +1,8 @@
+1. 	Ans: False. 
+	Explanation: There are only two methods for tuples.
+
+2. 	Ans: True
+	Explanation: None.
+	
+3. 	Ans: b. 
+	Explanation: Even though a list is one of the elements, the object constrained with () is a tuple!

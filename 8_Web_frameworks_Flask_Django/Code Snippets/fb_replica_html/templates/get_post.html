@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "username">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+
+      <table>
+         <thead>
+            <tr>
+               <th>UserName </th>
+               <th>Post</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for each in user_posts %}
+               <tr>
+                  <td>{{ each.username }}</td>
+                  <td>{{ each.user_post }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+   </body>
+</html>
+

@@ -1,0 +1,11 @@
+A. Create 2 tables with names: PLAYERS(ID, AGE, SPORT_NAME) and PLAYER_BIRTH_PLACES(PLAYER_ID, AREA) with foreign key "PLAYER_ID".
+
+B. Alter table PLAYERS to add a new column "NAME" which is a string.
+
+C. Insert elements into both tables
+
+D. Write a query to get AREA and NAME of players where SPORT_NAME is "Cricket" and AGE >=20 and in ascending order based on age.
+
+E. Create a TABLE with name AGES using PLAYERS table including tuples.
+
+F. Once it is created, write a query to delete data in the table(not complete table).

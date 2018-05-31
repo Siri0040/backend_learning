@@ -1,0 +1,71 @@
+Storing Student's Data:
+
+
+PUT student/_doc/john
+{
+    "student_id": "S1101",
+    "name": "John",
+    "class": "Tenth",
+    "marks": 96,
+    "subject": "Maths"
+}
+
+PUT student/_doc/jake
+{
+    "student_id": "S1102",
+    "name": "Jake",
+    "class": "Tenth",
+    "marks": 23,
+    "subject": "Maths"
+}
+
+PUT student/_doc/Raju
+{
+    "student_id": "S1103",
+    "name": "Raju",
+    "class": "Ninth",
+    "marks": 59,
+    "subject": "Maths"
+}
+
+PUT student/_doc/Ramu
+{
+    "student_id": "S1104",
+    "name": "Ramu",
+    "class": "Ninth",
+    "marks": 92,
+    "subject": "English"
+}
+
+PUT student/_doc/Sara
+{
+    "student_id": "S1105",
+    "name": "Sara",
+    "class": "Tenth",
+    "marks": 20,
+    "subject": "English"
+}
+
+PUT student/_doc/bhanu
+{
+    "student_id": "S1106",
+    "name": "Bhanu",
+    "class": "Tenth",
+    "marks": 99,
+    "subject": "Maths"
+}
+
+
+Retrieving failed students:
+GET student/_search
+{
+  "query": {
+    "bool": {
+      "must":     { "match": { "subject": "Maths" }},
+      "filter": {
+        "bool": { 
+            "must": [
+                { "range": { "marks": { "lt": 35 }}}
+            ]
+}}}}}
+

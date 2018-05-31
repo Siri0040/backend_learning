@@ -1,0 +1,13 @@
+1. 	Ans: c. 
+	Explanation: None. 
+	
+2. 	Ans: a. 
+	Explanation: None.
+	
+3. 	Ans: b
+	Explanation: None
+	
+What you know 
+If lst=[0,1,2] what is the result of lst.pop()
+Lists can have multiple object types.
+If lst=['a','b','c'] What is the result of lst[1:]?

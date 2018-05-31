@@ -1,0 +1,13 @@
+1. 	Ans: a. 
+	Explanation: None. 
+	
+2. Ans: b
+	Explanation: None
+	
+3. Ans: c.
+	Explanation: None. 
+	
+What you know 
+If s='hello' what is the output of s[1]
+If s='Sammy' what is the output of s[2:]?
+Strings are immutable.

@@ -1,0 +1,15 @@
+1. a) 
+	Explanation: This has a decimal point in it!
+	
+2. d) 
+	Explanation: None.
+	
+3. c) 
+	Explanation: Remember, Python 3 performs true division by default!
+	
+	
+What you know 
+	Which one of these is a floating point number?
+	Which of these will output the result 36?
+	In Python 3, what is the output of 1/2 ?
+	

@@ -1,0 +1,1 @@
+print [2093,3.143, 'this is a string']

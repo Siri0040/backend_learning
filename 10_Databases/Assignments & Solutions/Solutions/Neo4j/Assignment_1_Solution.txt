@@ -1,0 +1,52 @@
+A. 
+
+CREATE (adam:Employee{name: "Adam Smith", mail_id: "adam@companymail.com", gender: "Male"})
+CREATE (aravind:Employee{name: "Aravind R", mail_id: "aravind@companymail.com", gender: "Male"})
+CREATE (saira:Employee{name: "Saira B", mail_id: "saira@companymail.com", gender: "Female"})
+CREATE (prerna:Employee{name: "Prerna", mail_id: "prerna@companymail.com", gender: "Female"})
+CREATE (sarah:Employee{name: "Sarah P", mail_id: "sarath@companymail.com", gender: "Female"})
+CREATE (chetan:Employee{name: "Chetan K", mail_id: "chetan@companymail.com", gender: "Male"})
+CREATE (MineTech:Company{name: "Mine Technologies"})
+CREATE (SarahSolns:Company{name: "Sarah Solutions"})
+CREATE (adam)-[r:PROJECT_LEAD_IN]->(MineTech)
+CREATE (aravind)-[r1:DIRECTOR_OF]->(MineTech)
+CREATE (saira)-[r2:SOFTWARE_ENGINEER_IN]->(MineTech)
+CREATE (prerna)-[r3:SOFTWARE_ENGINEER_IN]->(MineTech)
+CREATE (chetan)-[r4:SOFTWARE_ENGINEER_IN]->(MineTech)
+CREATE (sarah)-[r5:DIRECTOR_OF]->(SarahSolns)
+RETURN adam, aravind, saira, prerna, chetan, MineTech, sarah, SarahSolns
+
+
+
+B. 
+MATCH (MineTech:Company {name: "Mine Technologies"})<-[: SOFTWARE_ENGINEER_IN]-(n) WHERE n.gender = "Female"
+RETURN n.name
+
+
+
+C.
+MATCH (p { name: "Adam Smith"})
+SET p.technical_skills= "C, C++, Java"
+RETURN p.technical_skills
+
+MATCH (p { name: "Aravind R"})
+SET p.technical_skills= "C, C++"
+RETURN p.technical_skills
+ 
+MATCH (p { name: "Saira B"})
+SET p.technical_skills= "Core Java" 
+RETURN p.technical_skills
+
+MATCH (p { name: "Prerna"})
+SET p.technical_skills= "C, C++, Java"
+RETURN p.technical_skills
+
+MATCH (p { name: "Sarah P"})
+SET p.technical_skills= "C, Java"
+RETURN p.technical_skills
+
+MATCH (p { name: "Chetan K"})
+SET p.technical_skills= "Java"
+RETURN p.technical_skills
+
+

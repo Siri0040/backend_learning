@@ -1,0 +1,14 @@
+1. 	Ans: True
+	Explanation: None 
+	
+2.	Ans: True
+	Explanation: None
+
+3. 	Ans: False
+	Explanation: None
+	
+4. 	Ans: False
+	Explanation: None
+
+5. 	Ans: True
+	Explanation: None
